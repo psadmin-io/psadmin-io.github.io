@@ -1,0 +1,218 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ElasticHQ - psadmin.io Wiki</title>
+<link rel="stylesheet" href="/assets/stylesheets/main.css">
+<link rel="alternate" type="application/rss+xml" title="psadmin.io Wiki Build Updates" href="http://wiki.psadmin.io/feed.build-env-updates.xml">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer></script>
+<script src="/assets/javascripts/site.js" type="text/javascript" charset="utf-8" defer></script>
+<script src="/assets/javascripts/main.js" type="text/javascript" charset="utf-8" defer></script>
+<script src="/assets/javascripts/prism.js" type="text/javascript" charset="utf-8" defer></script>
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64254497-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    <link rel="alternate" type="application/rss+xml" title="psadmin.io Community Wiki" href="/feed.xml">
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <header class="top">
+  <div class="logo">
+    
+  </div>
+  <div class="row topbar">
+    <h1 id="logo" class="logo">
+  <img alt="psadmin.io logo" src="/images/psadmin_io_white_1440.png" width="200">
+</h1>
+    <nav>
+      <ul id="navigation" class="navigation">
+        <li><a href="https://psadmin.io">Home</a></li>
+        <li><a href="https://psadmin.io/blog">Blog</a></li>
+        <li><a href="https://psadmin.io/category/podcast">Podcast</a></li>
+        <li><a href="https://psadmin.io/community">Community</a></li>
+        <li><a href="https://psadmin.io/training">Training</a></li>
+        <li><a href="https://github.com/psadmin-io">Code</a></li>
+        <li><a href="https://psadmin.io/conference">Conference</a></li>
+        <li><a href="https://wiki.psadmin.io/">Wiki</a></li>
+        <li><a href="https://psadmin.io/tools/">Tools</a></li>
+        <li class="toggle"><button type="button" id="toggle-menu" class="button--teal">Menu</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+      <div id="content" class="row">
+
+        <div id="sidebar" class="sidebar">
+  <div>
+    <!-- <h2>Search</h2> -->
+    <form action="/search.html" method="get" class="searchbox">
+      <input type="text" id="search-box" name="query" placeholder="Search"  class="searchbox-input">
+    </form>
+  </div>
+
+  <section class="sidebar-navigation">
+    <nav>
+      <h3>Getting Started</h3>
+      <ul>
+        
+        <li><a href="/posts/getting_started/tools/">Software and Tools</a></li>
+        
+        <li><a href="/posts/getting_started/mos_searching/">Searching in My Oracle Support</a></li>
+        
+      </ul>
+
+      <h3>PeopleTools</h3>
+      <ul>
+        <li class="is-overview"><a href="/posts/peopletools/">Overview</a></li>
+        
+        <li><a href="/posts/peopletools/hardcoded_roles/">Hardcoded Roles</a></li>
+        
+        <li><a href="/posts/peopletools/search_callback_user/">Search Framework Call Back User</a></li>
+        
+        <li><a href="/posts/peopletools/resend_content_sql/">Mass Resend Reports</a></li>
+        
+      </ul>
+
+      <h3>Database</h3>
+      <ul>
+        <li class="is-overview"><a href="/posts/database/">Overview</a></li>
+        
+        <li><a href="/posts/database/sql_refresh/">SQL to Update Tables on Refresh</a></li>
+        
+      </ul>
+
+      <h3>Middleware</h3>
+      <ul>
+        <li class="is-overview"><a href="/posts/middleware/">Overview</a></li>
+        
+        <li><a href="/posts/middleware/slow_weblogic_starts/">Slow WebLogic Starts</a></li>
+        
+        <li><a href="/posts/middleware/cookie_configuration">Cookie Configuration</a></li>
+        
+        <li><a href="/posts/middleware/elastichq/">ElasticHQ</a></li>
+        
+        <li><a href="/posts/middleware/pia_404_errors/">PIA 404 Errors</a></li>
+        
+        <li><a href="/posts/middleware/elasticsearchmonitoring/">Elasticsearch Monitoring Tools</a></li>
+        
+      </ul>
+
+      <h3>Cloud Architecture</h3>
+      <ul>
+        <li class="is-overview"><a href="/posts/pca/">Overview</a></li>
+        
+        <li><a href="/posts/pca/pi_passwords/">PeopleSoft Image Passwords</a></li>
+        
+        <li><a href="/pca/common_dpk_errors/">Common DPK Errors</a></li>
+        
+        <li><a href="/posts/pca/puppet_helpers/">Puppet Helper Functions</a></li>
+        
+        <li><a href="/posts/pca/cleanup/">DPK Cleanup Process</a></li>
+        
+        <li><a href="/posts/pca/sample_yaml/">Sample psft_customizations.yaml</a></li>
+        
+        <li><a href="/posts/pca/custom_facts/">Custom Facts</a></li>
+        
+        <li><a href="/pca/cloud_manager/">Cloud Manager Overview</a></li>
+        
+      </ul>
+
+      <h3>Server Administration</h3>
+      <ul>
+        <li class="is-overview"><a href="/posts/admin/">Overview</a></li>
+        
+        <li><a href="/posts/admin/unblock_tuxedo/">Unblock Tuxedo</a></li>
+        
+        <li><a href="/posts/admin/wl_demo_certs/">WebLogic Demo Certificates</a></li>
+        
+        <li><a href="/posts/admin/long_paths/">Remove Long Paths</a></li>
+        
+        <li><a href="/posts/admin/bandwidth_test/">Bandwidth Test</a></li>
+        
+        <li><a href="/posts/admin/windows_services/">Windows Services</a></li>
+        
+      </ul>
+
+      <h3>Development</h3>
+      <ul>
+        <li class="is-overview"><a href="/posts/development/">Overview</a></li>
+        
+        <li><a href="/posts/development/custom_change_package/">Working with a Custom Change Package</a></li>
+        
+        <li><a href="/posts/development/event_mapping_links/">Event Mapping Links</a></li>
+        
+      </ul>
+
+    </nav>
+  </section>
+
+  <section class="sidebar-notice">
+    <p>This documentation site is open source.
+      The <a href="https://github.com/psadmin-io/psadmin-wiki">README in our Git repository</a> explains how to contribute.</p>
+    <p>Check out the <a href="https://github.com/psadmin-io/psadmin-wiki/blob/master/STYLE.md">Style Guide</a> for tips on working with Markdown and how to make the wiki pages look great.</p>
+    <p>View the wiki's <a href="/code_of_conduct/">Code of Conduct</a></p>
+  </section>
+
+</div><!-- /#sidebar -->
+
+
+        <main id="main" class="main">
+          
+          
+            <aside class="improve-page"><a href="https://github.com/psadmin-io/psadmin-wiki/edit/master/middleware/elastichq.md" target="_blank" title="Edit this page on GitHub" class="button-pen" data-proofer-ignore>Improve this page on GitHub</a></aside>
+            <h1 class="title">ElasticHQ</h1>
+          
+          <p>If you want a utility to help you monitor your Elasticsearch nodes and clusters, ElasticHQ is a plugin that can give you a nice GUI.</p>
+
+<h2 id="installation">Installation</h2>
+
+<p>There are two ways you can install ElasticHQ. If your Elasticsearch server has access to the Internet, you can install the plugin from the command line:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> <span class="nv">$ES_HOME</span>\bin
+.\plugin <span class="nb">install </span>royrusso/elasticsearch-HQ/v2.0.2
+</code></pre></div></div>
+
+<blockquote>
+  <p>You need to use version <code class="highlighter-rouge">2.0.2</code> with the Elasticsearch 2.3.2 that ships with PeopleTools 8.55 and 8.56. The latest version of ElasticHQ is built for Elasticsearch 5.x</p>
+</blockquote>
+
+<p>To manually install ElasticHQ:</p>
+
+<ol>
+  <li><a href="https://github.com/royrusso/elasticsearch-HQ/releases">Download version 2.0.2 from here</a></li>
+  <li>Copy the .zip (or .tar) file to your Elasticsearch server.</li>
+  <li>Extract the .zip file to <code class="highlighter-rouge">$ES_HOME\plugins\hq</code></li>
+  <li>Restart Elasticsearch</li>
+  <li>Log into ElasticHQ at http://localhost:9200/_plugin/hq with the <code class="highlighter-rouge">esadmin</code> account</li>
+</ol>
+
+<h2 id="using-elastichq">Using ElasticHQ</h2>
+
+<p>ElasticHQ is meant to give you a read-only view of the system. If you want to make changes, I’d recomment you use Elasticsearch’s REST API.</p>
+
+<p>To view a node, enter the URL into the box at the top and click ‘Connect’. If your node is part of a cluster, ElasticHQ will show the cluster’s nodes. You can view the size of indexes, the stats of each node, and the cluster stats as well.</p>
+
+<p><img src="https://wiki.psadmin.io/posts/images/ElasticHQOverview.png" alt="ElasticHQ Screenshot" /></p>
+
+
+        </main>
+      </div><!-- /#content -->
+
+    </div><!-- /.wrapper -->
+  </body>
+</html>

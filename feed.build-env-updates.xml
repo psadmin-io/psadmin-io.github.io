@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>psadmin.io Wiki Updates</title>
+		<description>psadmin.io Wiki Updates</description>
+		<link>https:/wiki.psadmin.io</link>
+		<atom:link href="http://wiki.psadmin.io/feed.build-env-updates.xml" rel="self" type="application/rss+xml" />
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			<item>
+				<title></title>
+				<description>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;rss version=&quot;2.0&quot; xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot;&gt;
+	&lt;channel&gt;
+		&lt;title&gt;psadmin.io Wiki Updates&lt;/title&gt;
+		&lt;description&gt;psadmin.io Wiki Updates&lt;/description&gt;
+		&lt;link&gt;https:/wiki.psadmin.io&lt;/link&gt;
+		&lt;atom:link href=&quot;http://wiki.psadmin.io/feed.build-env-updates.xml&quot; rel=&quot;self&quot; type=&quot;application/rss+xml&quot; /&gt;
+		{% for page in site.pages %}
+		{% if page.category == &quot;build_env_updates&quot; %}
+			&lt;item&gt;
+				&lt;title&gt;{{ page.title | xml_escape }}&lt;/title&gt;
+				&lt;description&gt;{{ page.content | xml_escape }}&lt;/description&gt;
+				&lt;pubDate&gt;{{ page.date | date: &quot;%a, %d %b %Y %H:%M:%S %z&quot; }}&lt;/pubDate&gt;
+				&lt;link&gt;{{ site.url}}{{ page.url }}&lt;/link&gt;
+				&lt;guid isPermaLink=&quot;true&quot;&gt;{{ site.url }}{{ page.url }}&lt;/guid&gt;
+			&lt;/item&gt;
+		{% endif %}
+		{% endfor %}
+	&lt;/channel&gt;
+&lt;/rss&gt;
+</description>
+				<pubDate></pubDate>
+				<link>https://wiki.psadmin.io/feed.build-env-updates.xml</link>
+				<guid isPermaLink="true">https://wiki.psadmin.io/feed.build-env-updates.xml</guid>
+			</item>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</channel>
+</rss>
