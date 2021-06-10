@@ -1,0 +1,296 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Working with a Custom Change Package - psadmin.io Wiki</title>
+<link rel="stylesheet" href="/assets/stylesheets/main.css">
+<link rel="alternate" type="application/rss+xml" title="psadmin.io Wiki Build Updates" href="http://wiki.psadmin.io/feed.build-env-updates.xml">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer></script>
+<script src="/assets/javascripts/site.js" type="text/javascript" charset="utf-8" defer></script>
+<script src="/assets/javascripts/main.js" type="text/javascript" charset="utf-8" defer></script>
+<script src="/assets/javascripts/prism.js" type="text/javascript" charset="utf-8" defer></script>
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64254497-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    <link rel="alternate" type="application/rss+xml" title="psadmin.io Community Wiki" href="/feed.xml">
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <header class="top">
+  <div class="logo">
+    
+  </div>
+  <div class="row topbar">
+    <h1 id="logo" class="logo">
+  <img alt="psadmin.io logo" src="/images/psadmin_io_white_1440.png" width="200">
+</h1>
+    <nav>
+      <ul id="navigation" class="navigation">
+        <li><a href="https://psadmin.io">Home</a></li>
+        <li><a href="https://psadmin.io/blog">Blog</a></li>
+        <li><a href="https://psadmin.io/category/podcast">Podcast</a></li>
+        <li><a href="https://psadmin.io/community">Community</a></li>
+        <li><a href="https://psadmin.io/training">Training</a></li>
+        <li><a href="https://github.com/psadmin-io">Code</a></li>
+        <li><a href="https://psadmin.io/conference">Conference</a></li>
+        <li><a href="https://wiki.psadmin.io/">Wiki</a></li>
+        <li><a href="https://psadmin.io/tools/">Tools</a></li>
+        <li class="toggle"><button type="button" id="toggle-menu" class="button--teal">Menu</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+      <div id="content" class="row">
+
+        <div id="sidebar" class="sidebar">
+  <div>
+    <!-- <h2>Search</h2> -->
+    <form action="/search.html" method="get" class="searchbox">
+      <input type="text" id="search-box" name="query" placeholder="Search"  class="searchbox-input">
+    </form>
+  </div>
+
+  <section class="sidebar-navigation">
+    <nav>
+      <h3>Getting Started</h3>
+      <ul>
+        
+        <li><a href="/posts/getting_started/tools/">Software and Tools</a></li>
+        
+        <li><a href="/posts/getting_started/mos_searching/">Searching in My Oracle Support</a></li>
+        
+      </ul>
+
+      <h3>PeopleTools</h3>
+      <ul>
+        <li class="is-overview"><a href="/posts/peopletools/">Overview</a></li>
+        
+        <li><a href="/posts/peopletools/hardcoded_roles/">Hardcoded Roles</a></li>
+        
+        <li><a href="/posts/peopletools/search_callback_user/">Search Framework Call Back User</a></li>
+        
+        <li><a href="/posts/peopletools/resend_content_sql/">Mass Resend Reports</a></li>
+        
+      </ul>
+
+      <h3>Database</h3>
+      <ul>
+        <li class="is-overview"><a href="/posts/database/">Overview</a></li>
+        
+        <li><a href="/posts/database/sql_refresh/">SQL to Update Tables on Refresh</a></li>
+        
+      </ul>
+
+      <h3>Middleware</h3>
+      <ul>
+        <li class="is-overview"><a href="/posts/middleware/">Overview</a></li>
+        
+        <li><a href="/posts/middleware/slow_weblogic_starts/">Slow WebLogic Starts</a></li>
+        
+        <li><a href="/posts/middleware/cookie_configuration">Cookie Configuration</a></li>
+        
+        <li><a href="/posts/middleware/elastichq/">ElasticHQ</a></li>
+        
+        <li><a href="/posts/middleware/pia_404_errors/">PIA 404 Errors</a></li>
+        
+        <li><a href="/posts/middleware/elasticsearchmonitoring/">Elasticsearch Monitoring Tools</a></li>
+        
+      </ul>
+
+      <h3>Cloud Architecture</h3>
+      <ul>
+        <li class="is-overview"><a href="/posts/pca/">Overview</a></li>
+        
+        <li><a href="/posts/pca/pi_passwords/">PeopleSoft Image Passwords</a></li>
+        
+        <li><a href="/pca/common_dpk_errors/">Common DPK Errors</a></li>
+        
+        <li><a href="/posts/pca/puppet_helpers/">Puppet Helper Functions</a></li>
+        
+        <li><a href="/posts/pca/cleanup/">DPK Cleanup Process</a></li>
+        
+        <li><a href="/posts/pca/sample_yaml/">Sample psft_customizations.yaml</a></li>
+        
+        <li><a href="/posts/pca/custom_facts/">Custom Facts</a></li>
+        
+        <li><a href="/pca/cloud_manager/">Cloud Manager Overview</a></li>
+        
+      </ul>
+
+      <h3>Server Administration</h3>
+      <ul>
+        <li class="is-overview"><a href="/posts/admin/">Overview</a></li>
+        
+        <li><a href="/posts/admin/unblock_tuxedo/">Unblock Tuxedo</a></li>
+        
+        <li><a href="/posts/admin/wl_demo_certs/">WebLogic Demo Certificates</a></li>
+        
+        <li><a href="/posts/admin/long_paths/">Remove Long Paths</a></li>
+        
+        <li><a href="/posts/admin/bandwidth_test/">Bandwidth Test</a></li>
+        
+        <li><a href="/posts/admin/windows_services/">Windows Services</a></li>
+        
+      </ul>
+
+      <h3>Development</h3>
+      <ul>
+        <li class="is-overview"><a href="/posts/development/">Overview</a></li>
+        
+        <li><a href="/posts/development/custom_change_package/">Working with a Custom Change Package</a></li>
+        
+        <li><a href="/posts/development/event_mapping_links/">Event Mapping Links</a></li>
+        
+      </ul>
+
+    </nav>
+  </section>
+
+  <section class="sidebar-notice">
+    <p>This documentation site is open source.
+      The <a href="https://github.com/psadmin-io/psadmin-wiki">README in our Git repository</a> explains how to contribute.</p>
+    <p>Check out the <a href="https://github.com/psadmin-io/psadmin-wiki/blob/master/STYLE.md">Style Guide</a> for tips on working with Markdown and how to make the wiki pages look great.</p>
+    <p>View the wiki's <a href="/code_of_conduct/">Code of Conduct</a></p>
+  </section>
+
+</div><!-- /#sidebar -->
+
+
+        <main id="main" class="main">
+          
+          
+            <aside class="improve-page"><a href="https://github.com/psadmin-io/psadmin-wiki/edit/master/development/custom_change_packages.md" target="_blank" title="Edit this page on GitHub" class="button-pen" data-proofer-ignore>Improve this page on GitHub</a></aside>
+            <h1 class="title">Working with a Custom Change Package</h1>
+          
+          <p>Author: Andy Dorfman</p>
+
+<h2 id="prepare-external-objects">Prepare External Objects</h2>
+
+<h3 id="create-dms-file">Create DMS file</h3>
+
+<ul>
+  <li><code class="highlighter-rouge">d:\temp\update_psstatus.dms</code>
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">set</span> <span class="n">log</span> <span class="n">update_psstatus</span><span class="p">.</span><span class="n">log</span><span class="p">;</span>
+  <span class="k">update</span> <span class="n">PSSTATUS</span> <span class="k">set</span> <span class="n">LASTCHANGEDTTM</span> <span class="o">=</span> <span class="o">%</span><span class="n">CurrentDateTimeIn</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="application-designer-portion">Application Designer portion</h2>
+
+<h3 id="create-custom-file-code-pstypecodedefn">Create Custom File Code (PSTYPECODEDEFN)</h3>
+
+<ul>
+  <li><code class="highlighter-rouge">Application Designer</code> &gt; <code class="highlighter-rouge">Tools</code> &gt; <code class="highlighter-rouge">Miscellaneous Definitions</code> &gt; <code class="highlighter-rouge">File Type Codes</code>
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">FILEREFTYPECODE</span><span class="pi">:</span>    <span class="s1">'</span><span class="s">CUSTOM_SCRIPTS'</span>
+<span class="na">FILEREFPATH</span><span class="pi">:</span>        <span class="s1">'</span><span class="s">%ps_cust_home%\scripts'</span>
+<span class="na">DESCRLONG</span><span class="pi">:</span>          <span class="s1">'</span><span class="s">LBC</span><span class="nv"> </span><span class="s">PS_CUST_HOME\scripts</span><span class="nv"> </span><span class="s">folder'</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="create-custom-script-file-reference">Create Custom Script File Reference</h3>
+
+<ul>
+  <li><code class="highlighter-rouge">Application Designer</code> &gt; <code class="highlighter-rouge">New</code> &gt; <code class="highlighter-rouge">File Reference</code>
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">File Name and Path</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Click</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">...</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">select</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">`D:</span><span class="se">\t</span><span class="s">emp</span><span class="err">\</span><span class="s">update_psstatus.dms`"</span>
+<span class="na">Binary</span><span class="pi">:</span>             <span class="s1">'</span><span class="s">No'</span>
+<span class="na">Database Platform</span><span class="pi">:</span>  <span class="s1">'</span><span class="s">All'</span>
+<span class="na">PeopleSoft Server</span><span class="pi">:</span>  <span class="s1">'</span><span class="s">File</span><span class="nv"> </span><span class="s">Server'</span>
+<span class="na">Operating System</span><span class="pi">:</span>   <span class="s1">'</span><span class="s">All'</span>
+</code></pre></div>    </div>
+  </li>
+  <li><code class="highlighter-rouge">Application Designer</code> &gt; <code class="highlighter-rouge">File</code> &gt; <code class="highlighter-rouge">Save As</code>
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">Save Name As</span><span class="pi">:</span>   <span class="s1">'</span><span class="s">UPDATE_PSSTATUS_DMS'</span>
+<span class="na">File Type Code</span><span class="pi">:</span> <span class="s1">'</span><span class="s">CUSTOM_SCRIPTS'</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Click <code class="highlighter-rouge">OK</code> to save</li>
+  <li>Replace <code class="highlighter-rouge">D:\temp\update_psstatus.dms</code> with <code class="highlighter-rouge">%FILEREFPATH%\update_psstatus.dms</code></li>
+  <li>Click <code class="highlighter-rouge">OK</code> to save again</li>
+  <li>
+    <p>Click <code class="highlighter-rouge">F7</code> to import File Reference Definition into the project</p>
+  </li>
+  <li><code class="highlighter-rouge">Application Designer</code> &gt; <code class="highlighter-rouge">File</code> &gt; <code class="highlighter-rouge">Save Project</code>
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">Save Project Name As</span><span class="pi">:</span> <span class="s1">'</span><span class="s">LBC_IT0001'</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Click <code class="highlighter-rouge">OK</code> to save</p>
+  </li>
+  <li><code class="highlighter-rouge">Application Designer</code> &gt; <code class="highlighter-rouge">Tools</code> &gt; <code class="highlighter-rouge">Project Properties</code>
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">Description</span><span class="pi">:</span>    <span class="s1">'</span><span class="s">Testing</span><span class="nv"> </span><span class="s">CUSTOM_SCRIPTS</span><span class="nv"> </span><span class="s">File</span><span class="nv"> </span><span class="s">References'</span>
+<span class="na">Comments</span><span class="pi">:</span>       <span class="s1">'</span><span class="s">Testing</span><span class="nv"> </span><span class="s">description'</span>
+<span class="na">Change Project</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Check'</span>
+<span class="na">Update ID</span><span class="pi">:</span>      <span class="s1">'</span><span class="s">LBC_IT0001'</span>
+<span class="na">Add</span><span class="pi">:</span> 
+</code></pre></div>    </div>
+  </li>
+  <li>Click <code class="highlighter-rouge">OK</code></li>
+  <li><code class="highlighter-rouge">Application Designer</code> &gt; <code class="highlighter-rouge">File</code> &gt; <code class="highlighter-rouge">Save All</code></li>
+  <li><code class="highlighter-rouge">Application Designer</code> &gt; <code class="highlighter-rouge">Upgrade</code> Tab</li>
+  <li>Doube-Click on <code class="highlighter-rouge">File References</code>, Check <code class="highlighter-rouge">Execute</code> Flag</li>
+  <li><code class="highlighter-rouge">Application Designer</code> &gt; <code class="highlighter-rouge">File</code> &gt; <code class="highlighter-rouge">Save All</code></li>
+</ul>
+
+<h3 id="create-change-package">Create Change Package</h3>
+
+<ul>
+  <li><code class="highlighter-rouge">Application Designer</code> &gt; <code class="highlighter-rouge">Tools</code> &gt; <code class="highlighter-rouge">Create Change Package</code></li>
+  <li>Click <code class="highlighter-rouge">OK</code>
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">Export Directory</span><span class="pi">:</span>       <span class="s1">'</span><span class="s">d:\temp\LBC_IT0001'</span>
+<span class="na">File Reference Path</span><span class="pi">:</span>    <span class="s1">'</span><span class="s">D:\temp'</span>
+<span class="na">Update ID</span><span class="pi">:</span>              <span class="s1">'</span><span class="s">LBC_IT0001'</span>
+<span class="na">Generate New Template</span><span class="pi">:</span>  <span class="s1">'</span><span class="s">Check'</span>
+</code></pre></div>    </div>
+  </li>
+  <li><code class="highlighter-rouge">Application Designer</code> &gt; <code class="highlighter-rouge">Tools</code> &gt; <code class="highlighter-rouge">Finalize Change Package</code>
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">Export Directory</span><span class="pi">:</span> <span class="s1">'</span><span class="s">d:\temp\lbc_it0001\updlbc_it0001'</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Click <code class="highlighter-rouge">OK</code></li>
+</ul>
+
+<h3 id="apply-change-package">Apply Change Package</h3>
+
+<ul>
+  <li>Place <code class="highlighter-rouge">d:\temp\LBC_IT0001\updLBC_IT0001\updLBC_IT0001.zip</code> in CA’s <code class="highlighter-rouge">download</code> directory</li>
+  <li>
+    <p><code class="highlighter-rouge">Change Assistant</code> &gt; <code class="highlighter-rouge">Tools</code> &gt; <code class="highlighter-rouge">Apply Change Package</code> &gt; <code class="highlighter-rouge">Apply Automatically Without Compare</code> &gt; <code class="highlighter-rouge">Next</code> &gt; <code class="highlighter-rouge">Apply without using Change Impact Analyzer</code> &gt; <code class="highlighter-rouge">Next</code> &gt; Select product line release &gt; <code class="highlighter-rouge">Next</code> &gt; Select target environment &gt; <code class="highlighter-rouge">Next</code> &gt; Select Host &gt; <code class="highlighter-rouge">Next</code> &gt; Provide Credentials &gt; <code class="highlighter-rouge">Next</code> &gt; Select download directory &gt; <code class="highlighter-rouge">Next</code> &gt; Select <code class="highlighter-rouge">UPDLBC_IT0001</code> &gt; <code class="highlighter-rouge">Next</code> &gt; <code class="highlighter-rouge">Next</code> &gt; <code class="highlighter-rouge">Validate Now</code> (make sure psemagent is running) &gt; <code class="highlighter-rouge">Begin Apply</code></p>
+  </li>
+  <li>Examine the log file for <code class="highlighter-rouge">Deploy Files</code> &gt; <code class="highlighter-rouge">File Type Code: CUSTOM_SCRIPTS</code> &gt; <code class="highlighter-rouge">UPDATE_PSSTATUS_DMS</code></li>
+</ul>
+
+<blockquote>
+  <p>It looks like it’s finding only 1 file server under PS_HOME and deploying the file udpate_psstatus.dms only to that 1 location, most likely due to me selecting only ‘File Server’ during File Reference creation.  Nothing got transferred to PS_CUST_HOME</p>
+</blockquote>
+
+<ul>
+  <li>Examine the view Script for <code class="highlighter-rouge">Execute File References</code> &gt; <code class="highlighter-rouge">Execute DMS</code> &gt; <code class="highlighter-rouge">UPDATE_PSSTATUS_DMS</code></li>
+</ul>
+
+<blockquote>
+  <p>It is executing update_psstatus.dms script from the staging directory</p>
+</blockquote>
+
+        </main>
+      </div><!-- /#content -->
+
+    </div><!-- /.wrapper -->
+  </body>
+</html>

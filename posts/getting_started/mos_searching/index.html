@@ -1,0 +1,301 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Searching in My Oracle Support - psadmin.io Wiki</title>
+<link rel="stylesheet" href="/assets/stylesheets/main.css">
+<link rel="alternate" type="application/rss+xml" title="psadmin.io Wiki Build Updates" href="http://wiki.psadmin.io/feed.build-env-updates.xml">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer></script>
+<script src="/assets/javascripts/site.js" type="text/javascript" charset="utf-8" defer></script>
+<script src="/assets/javascripts/main.js" type="text/javascript" charset="utf-8" defer></script>
+<script src="/assets/javascripts/prism.js" type="text/javascript" charset="utf-8" defer></script>
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64254497-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    <link rel="alternate" type="application/rss+xml" title="psadmin.io Community Wiki" href="/feed.xml">
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <header class="top">
+  <div class="logo">
+    
+  </div>
+  <div class="row topbar">
+    <h1 id="logo" class="logo">
+  <img alt="psadmin.io logo" src="/images/psadmin_io_white_1440.png" width="200">
+</h1>
+    <nav>
+      <ul id="navigation" class="navigation">
+        <li><a href="https://psadmin.io">Home</a></li>
+        <li><a href="https://psadmin.io/blog">Blog</a></li>
+        <li><a href="https://psadmin.io/category/podcast">Podcast</a></li>
+        <li><a href="https://psadmin.io/community">Community</a></li>
+        <li><a href="https://psadmin.io/training">Training</a></li>
+        <li><a href="https://github.com/psadmin-io">Code</a></li>
+        <li><a href="https://psadmin.io/conference">Conference</a></li>
+        <li><a href="https://wiki.psadmin.io/">Wiki</a></li>
+        <li><a href="https://psadmin.io/tools/">Tools</a></li>
+        <li class="toggle"><button type="button" id="toggle-menu" class="button--teal">Menu</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+      <div id="content" class="row">
+
+        <div id="sidebar" class="sidebar">
+  <div>
+    <!-- <h2>Search</h2> -->
+    <form action="/search.html" method="get" class="searchbox">
+      <input type="text" id="search-box" name="query" placeholder="Search"  class="searchbox-input">
+    </form>
+  </div>
+
+  <section class="sidebar-navigation">
+    <nav>
+      <h3>Getting Started</h3>
+      <ul>
+        
+        <li><a href="/posts/getting_started/tools/">Software and Tools</a></li>
+        
+        <li><a href="/posts/getting_started/mos_searching/">Searching in My Oracle Support</a></li>
+        
+      </ul>
+
+      <h3>PeopleTools</h3>
+      <ul>
+        <li class="is-overview"><a href="/posts/peopletools/">Overview</a></li>
+        
+        <li><a href="/posts/peopletools/hardcoded_roles/">Hardcoded Roles</a></li>
+        
+        <li><a href="/posts/peopletools/search_callback_user/">Search Framework Call Back User</a></li>
+        
+        <li><a href="/posts/peopletools/resend_content_sql/">Mass Resend Reports</a></li>
+        
+      </ul>
+
+      <h3>Database</h3>
+      <ul>
+        <li class="is-overview"><a href="/posts/database/">Overview</a></li>
+        
+        <li><a href="/posts/database/sql_refresh/">SQL to Update Tables on Refresh</a></li>
+        
+      </ul>
+
+      <h3>Middleware</h3>
+      <ul>
+        <li class="is-overview"><a href="/posts/middleware/">Overview</a></li>
+        
+        <li><a href="/posts/middleware/slow_weblogic_starts/">Slow WebLogic Starts</a></li>
+        
+        <li><a href="/posts/middleware/cookie_configuration">Cookie Configuration</a></li>
+        
+        <li><a href="/posts/middleware/elastichq/">ElasticHQ</a></li>
+        
+        <li><a href="/posts/middleware/pia_404_errors/">PIA 404 Errors</a></li>
+        
+        <li><a href="/posts/middleware/elasticsearchmonitoring/">Elasticsearch Monitoring Tools</a></li>
+        
+      </ul>
+
+      <h3>Cloud Architecture</h3>
+      <ul>
+        <li class="is-overview"><a href="/posts/pca/">Overview</a></li>
+        
+        <li><a href="/posts/pca/pi_passwords/">PeopleSoft Image Passwords</a></li>
+        
+        <li><a href="/pca/common_dpk_errors/">Common DPK Errors</a></li>
+        
+        <li><a href="/posts/pca/puppet_helpers/">Puppet Helper Functions</a></li>
+        
+        <li><a href="/posts/pca/cleanup/">DPK Cleanup Process</a></li>
+        
+        <li><a href="/posts/pca/sample_yaml/">Sample psft_customizations.yaml</a></li>
+        
+        <li><a href="/posts/pca/custom_facts/">Custom Facts</a></li>
+        
+        <li><a href="/pca/cloud_manager/">Cloud Manager Overview</a></li>
+        
+      </ul>
+
+      <h3>Server Administration</h3>
+      <ul>
+        <li class="is-overview"><a href="/posts/admin/">Overview</a></li>
+        
+        <li><a href="/posts/admin/unblock_tuxedo/">Unblock Tuxedo</a></li>
+        
+        <li><a href="/posts/admin/wl_demo_certs/">WebLogic Demo Certificates</a></li>
+        
+        <li><a href="/posts/admin/long_paths/">Remove Long Paths</a></li>
+        
+        <li><a href="/posts/admin/bandwidth_test/">Bandwidth Test</a></li>
+        
+        <li><a href="/posts/admin/windows_services/">Windows Services</a></li>
+        
+      </ul>
+
+      <h3>Development</h3>
+      <ul>
+        <li class="is-overview"><a href="/posts/development/">Overview</a></li>
+        
+        <li><a href="/posts/development/custom_change_package/">Working with a Custom Change Package</a></li>
+        
+        <li><a href="/posts/development/event_mapping_links/">Event Mapping Links</a></li>
+        
+      </ul>
+
+    </nav>
+  </section>
+
+  <section class="sidebar-notice">
+    <p>This documentation site is open source.
+      The <a href="https://github.com/psadmin-io/psadmin-wiki">README in our Git repository</a> explains how to contribute.</p>
+    <p>Check out the <a href="https://github.com/psadmin-io/psadmin-wiki/blob/master/STYLE.md">Style Guide</a> for tips on working with Markdown and how to make the wiki pages look great.</p>
+    <p>View the wiki's <a href="/code_of_conduct/">Code of Conduct</a></p>
+  </section>
+
+</div><!-- /#sidebar -->
+
+
+        <main id="main" class="main">
+          
+          
+            <aside class="improve-page"><a href="https://github.com/psadmin-io/psadmin-wiki/edit/master/getting_started/mos_searching.md" target="_blank" title="Edit this page on GitHub" class="button-pen" data-proofer-ignore>Improve this page on GitHub</a></aside>
+            <h1 class="title">Searching in My Oracle Support</h1>
+          
+          <p>Some tips when searching in My Oracle Support to help you find relevant documents.</p>
+
+<h3 id="platform-codes">Platform Codes</h3>
+
+<p>Use the platform codes to narrow down your search. For example, <code class="highlighter-rouge">E-RD</code> will search for Report Distribution documents related to PeopleSoft Enterprise.</p>
+
+<p>Here is a list some common codes to use when searching</p>
+
+<ul>
+  <li><code class="highlighter-rouge">E-PIA</code>: PIA related issue</li>
+  <li><code class="highlighter-rouge">E-ES</code>: Elasticsearch</li>
+  <li><code class="highlighter-rouge">E-PTSF</code>: PeopleSoft Search Framework (ES, SES and the PeopleSoft side)</li>
+  <li><code class="highlighter-rouge">E-SSL</code>: SSL and PeopleSoft</li>
+</ul>
+
+<p>If you look at the beginning of a document title, you can pick up on common platform codes and use those in the future to help narrow your search.</p>
+
+<h3 id="helpful-mos-bookmarks">Helpful MOS Bookmarks</h3>
+
+<p>MOS allows you to bookmark a document by clicking the faint yellow star on the top left of any page next to the title. Once you have added it to your bookmark list, you can organize your list into folders by selecting the yellow star in the top right next to the search bar and selecting <strong>Manage Favorites…</strong></p>
+
+<h4 id="adventures-in-mos">Adventures in MOS</h4>
+<ul>
+  <li><code class="highlighter-rouge">TODO</code>: Include list of Adventures in MOS docs mentioned on the podcast</li>
+</ul>
+
+<h4 id="database">Database</h4>
+<ul>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=742060.1">Announcement: Release Schedule of Current Database Releases [ID: 742060.1]	29/04/2016</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=413484.1">Bulletin: Data Guard Support for Heterogeneous Primary and Physical Standbys in Same Data Guard Configuration [ID: 413484.1]	12/07/2016</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=1456176.1">Announcement: Oracle Database Advisor Webcast Schedule and Archive recordings [ID: 1456176.1]	12/07/2016</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=1284265.1">Document: Oracle Premier Support - Oracle Database Support News Archive \ID: 1284265.1]	12/07/2016</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=730365.1">How To: Oracle Database Upgrade Path Reference List [ID: 730365.1]	30/04/2018</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=1595421.2">Document: Information Center: Oracle Database 12c Release 1 [ID: 1595421.2]	04/05/2018</a></li>
+</ul>
+
+<h4 id="enterprise-manager">Enterprise Manager</h4>
+<ul>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=422073.1">Bulletin: How to Configure the Enterprise Management Agent Host Credentials for PAM and LDAP [ID: 422073.1]	29/04/2016</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=19130520">Database patch plan validation fails when normal and privileged creds are same [Oracle] [ID: 19130520]	29/04/2016</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=1473912.1">Bulletin: Prerequisite script for Exadata Discovery in Oracle Enterprise Manager Cloud Control 12c and 13c [ID: 1473912.1]	24/08/2016</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=1486995.1">Reference: Release Schedule for Enterprise Manager Cloud Control 12c Plug-ins [ID: 1486995.1]	29/04/2016</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=1379818.2">Document: Information Center: Enterprise Manager Base Platform Release Cloud Control 12c [ID: 1379818.2]	12/07/2016</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=1537815.1">How To: How to integrate the JIRA ticketing tool with Enterprise Manager Cloud Control 12c [ID: 1537815.1]	19/05/2017</a></li>
+</ul>
+
+<h4 id="everything">EVERYTHING</h4>
+<ul>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=113.2">Document: Privacy and Security Feature Guidance for all Oracle Products (On Premise) [ID: 113.2]	27/06/2019</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=222.1">System Doc: Oracle Premier Support - Product Support Blog and Newsletter Index [ID: 222.1]	29/04/2016</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=1987485.2">Document: Catalog: Oracle Information Centers: All Products - Database - Exadata - EBS - JDE - Fusion - Middleware - GBUs - Siebel - Sun Systems - Peoplesoft - Enterprise Manager [ID: 1987485.2]	29/04/2016</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=250.2">Document: Oracle Support Lifecycle Advisors [ID: 250.2]	16/01/2018</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=740966.1">Announcement: Advisor Webcasts: Current Schedule and Archived Recordings [ID: 740966.1]	12/01/2018</a></li>
+</ul>
+
+<h4 id="exadata">Exadata</h4>
+<ul>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=1306791.2">Document: Information Center: Oracle Exadata Database Machine [ID: 1306791.2]	29/04/2016</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=1070954.1">Reference: Oracle Exadata Database Machine exachk or HealthCheck [ID: 1070954.1]	24/08/2016</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=1270094.1">Reference: Exadata Critical Issues [ID: 1270094.1]	12/07/2016</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=1270094.1">Announcement: Oracle Engineered Systems Advisor Webcast Schedule and Archive recordings [ID: 1456202.1]	12/07/2016</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=888828.1">Reference: Exadata Database Machine and Exadata Storage Server Supported Versions [ID: 888828.1]	12/07/2016</a></li>
+</ul>
+
+<h4 id="java">Java</h4>
+<ul>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=1439822.1">Reference: All Java SE Downloads on MOS [ID: 1439822.1]	17/01/2019</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=1492980.1">White Paper: How to Install and Maintain the Java SE Installed or Used with FMW 11g/12c Products [ID: 1492980.1]	17/01/2019</a></li>
+</ul>
+
+<h4 id="patching">Patching</h4>
+<ul>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=2281647.1">FAQ: E-WL: Frequently Asked Questions about Upgrading WebLogic 12c for PeopleTools 8.56 to a Newer Patch Set Update (PSU), Release, and/or a Newer Java Patch Level [ID: 2281647.1]	04/09/2018</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=2217053.1">Bulletin: RAC Rolling Install Process for the “Oracle JavaVM Component Database PSU/RU” (OJVM PSU/RU) Patches [ID: 2217053.1]	04/05/2018</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=1470197.1">Announcement: Patch Set Update (PSU) Release Listing for Oracle WebLogic Server (WLS) [ID: 1470197.1]</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=950131.1">Announcement: Error Correction Support Dates for Oracle WebLogic Server [ID: 950131.1]	12/01/2018</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=759851.1">Reference: PeopleSoft Enterprise PeopleTools Certification Table of Contents [ID: 759851.1]	18/01/2018</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=2325393.1">Reference: Critical Patch Update (CPU) Program January 2018 Patch Availability Document (PAD) [ID: 2325393.1]	17/01/2018</a></li>
+</ul>
+
+<h4 id="peoplesoft">Peoplesoft</h4>
+<ul>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=1322888.1">How To: pscbo_stats - Improving Statistics in Oracle RDBMS for PeopleSoft Enterprise [ID: 1322888.1]	19/01/2017</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=1641843.2">Document: PeopleSoft Update Manager (PUM) Home Page [ID: 1641843.2]</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=876292.1">System Doc: PeopleSoft PeopleTools Maintenance Schedule [ID: 876292.1]	29/04/2016</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=764222.1">Reference: Tech Update - Main Page [ID: 764222.1]	29/04/2016</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=1100831.1">Reference: Required Interim Patches for the Oracle Database with PeopleSoft [ID: 1100831.1]	29/04/2016</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=2267247.1">Reference: Oracle’’'’s PeopleSoft PeopleTools 8.56 New Features Overview [ID: 2267247.1]	07/11/2017</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=1533318.1">How To: E-IB: Example for PeopleSoft REST provider service (GET/POST methods) [ID: 1533318.1]	14/02/2019</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=2062712.2">Document: PeopleSoft PeopleTools Patches Home Page [ID: 2062712.2]	17/12/2018</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=2433119.2">Document: Oracle’’'’s PeopleSoft PeopleTools 8.57 Home Page [ID: 2433119.2]	17/01/2019</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=1509442.1">How To: E-PORTAL: How To Force All Browsers To Update Cache? [ID: 1509442.1]	12/11/2018</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=2259140.2">Document: Oracle’’'’s PeopleSoft PeopleTools 8.56 Home Page [ID: 2259140.2]	14/02/2019</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=1445965.1">How To: E-ORA Advice for the PeopleSoft Oracle DBA [ID: 1445965.1]	12/06/2018</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=1446793.1">How To: E-ORA How to Configure PeopleSoft for Maximum Availability [ID: 1446793.1]	02/08/2018</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=643499.1">How To: E-INST PT8.4x, PT 8.5x: How to Copy/Clone/Migrate/Refresh a PeopleSoft Environment [ID: 643499.1]	04/04/2018</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=2238983.2">Document: Lifetime Support Summary for PeopleSoft Releases [ID: 2238983.2]	19/03/2018</a></li>
+</ul>
+
+<h4 id="platinum-support">Platinum support</h4>
+<ul>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=1605750.1">Reference: Welcome to Oracle Platinum Services [ID: 1605750.1]	24/08/2016</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=1960456.1">Announcement: Platinum Welcome Community Call and OASP Call Schedule [ID: 1960456.1]	24/08/2016</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=199389.1">Reference: How To Request Management Attention to a Service Request (SR) with Oracle Support Services [ID: 199389.1]	21/11/2016</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=1993848.1">Reference: Oracle Platinum Services – Quick Reference Guide [ID: 1993848.1]	21/11/2016</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=166650.1">System Doc: Working Effectively With Oracle Support - Best Practices [ID: 166650.1]	16/05/2017</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=2190010.1">How To: How to Schedule Exadata Patching Request using Oracle Advanced Support Gateway (OASG) Portal for Platinum Customers. [ID: 2190010.1]	26/07/2018</a></li>
+</ul>
+
+<h4 id="rman">RMAN</h4>
+<ul>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=388422.1">FAQ: Top 10 Backup and Recovery Best Practices [ID: 388422.1]	12/12/2016</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=1913937.1">How To: STEP BY STEP RMAN DUPLICATE Database From RAC ASM To RAC ASM [ID: 1913937.1]	16/05/2017</a></li>
+  <li><a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=2007972.1">Problem: ORA-4062 During the Backup of FRA [ID: 2007972.1]</a></li>
+</ul>
+
+        </main>
+      </div><!-- /#content -->
+
+    </div><!-- /.wrapper -->
+  </body>
+</html>
